@@ -10,18 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_20_110241) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_04_20_110241) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "characters", force: :cascade do |t|
-    t.datetime "first_casted_magic_at"
-    t.datetime "first_casted_magic_precisely_at", precision: 6
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.datetime "received_hogwarts_letter_at", precision: 6
-    t.datetime "received_hogwarts_letter_precisely_at", precision: 6
+    t.datetime "first_casted_magic_at", precision: nil
+    t.datetime "first_casted_magic_precisely_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "received_hogwarts_letter_at"
+    t.datetime "received_hogwarts_letter_precisely_at"
   end
 
 end
